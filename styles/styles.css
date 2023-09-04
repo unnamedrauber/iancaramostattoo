@@ -151,7 +151,7 @@ body{
   .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px; /* Espaçamento entre as imagens */
+    gap: 20px; /* Espaçamento entre as imagens */
     max-width: 800px; /* Largura máxima do álbum */
     margin: 0 auto;
     padding-top: 2.5em;
