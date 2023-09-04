@@ -4,9 +4,9 @@
   --cor-textobotoes: #000;
   --cor-borda-botoes-cabecalho-links:#90E0EF;
   --cor-hover-botoes: #47B5FF;
-  --cor-titulo:#06283D;
-  --cor-titulo-destaque:#CAF0F8;
-  --cor-paragrafos:#03045E;
+  --cor-titulo:#230425;
+  --cor-titulo-destaque:#e85cd0;
+  --cor-paragrafos:#250234;
 
   --cor-fundo-rodape: #DFF6FF;
   --cor-borda-rodape: #0f0f35;
@@ -25,11 +25,11 @@
 body{
     box-sizing: border-box;
     height: 100vh;
-    background-color: var(--cor-background);
+    background-image: radial-gradient(circle,#00B4D8,#7604a7 100% );
 }
 
 .cabecalho {
-    padding: 2% 0% 0% 15%;
+    padding: 2% 0% 0% 35%;
 }
 
 .cabecalho__menu {
@@ -147,23 +147,34 @@ body{
     padding-top: 5px;
     padding-bottom: 4px;
   }
-  .galery {
-    margin: 5% 0% 5% 0%;
+  
+  .gallery {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap-reverse;
-    align-items: center;
-    
+    flex-wrap: wrap;
+    gap: 10px; /* Espaçamento entre as imagens */
+    max-width: 800px; /* Largura máxima do álbum */
+    margin: 0 auto;
+    padding-top: 5em;
+    padding-left: 6em;
   }
   
-  .galery img:hover {
-    border: 5px groove var(--cor-img-hover);
+  .gallery-item {
+    flex-basis: calc(33.33% - 10px); /* 3 colunas com margem entre elas */
+    margin-bottom: 20px; /* Espaçamento entre as linhas */
+    box-sizing: border-box;
   }
   
-  .galery__conteudo {
-    
-    width: 420px;
+  .gallery-item img {
+    max-width: 100%;
     height: auto;
+    display: block;
+    border: 2px solid #ddd; /* Borda ao redor das imagens */
+    border-radius: 8px; /* Borda arredondada */
+  }
+  
+  .gallery-item img:hover {
+    border-color: #333; /* Cor da borda ao passar o mouse */
+    transition: border-color 0.3s ease;
   }
 
   @media (max-width: 1200px ){
@@ -182,5 +193,16 @@ body{
     }
     .apresentacao__conteudo{
       width: auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .gallery {
+      max-width: 100%; /* Largura máxima ocupando toda a largura da tela */
+      padding: 10px; /* Espaçamento adicional nas laterais */
+    }
+  
+    .gallery-item {
+      flex-basis: calc(50% - 10px); /* 2 colunas em telas menores */
     }
   }
