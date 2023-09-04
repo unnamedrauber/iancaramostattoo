@@ -159,7 +159,7 @@ body{
   }
   
   .gallery-item {
-    flex-basis: calc(33.33% - 15px); /* 3 colunas com margem entre elas */
+    flex-basis: calc(40% - 15px); /* 3 colunas com margem entre elas */
     margin-bottom: 20px; /* Espaçamento entre as linhas */
     box-sizing: border-box;
   }
